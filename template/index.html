@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Validator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container-mid"></div>
+<div class="img-card"><img id="credit-card-img" src="{{url_for('static', filename='credit.png')}}"></div>
+<form method="POST" action="/processar">
+    <input type="text" name="numero_cartao" id="numero_cartao" placeholder="Card Number" required>
+    <br>
+    <input type="text" name="data_expi" id="data_expi" placeholder="MM/AA" required>
+    <br>
+    <input type="text" name="cvv" id="cvv" placeholder="CVC" required>
+    <br>
+    <input type="submit" value="Validate">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+        {% for category, message in messages %}
+        <li class="flash-message {{category}}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</form>
+</body>
+</html>

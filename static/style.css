@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;';
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+label{
+    display: block;
+    width: 300px;
+    text-align: left;
+    margin-right: 10px;
+}
+input{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    outline: none;
+}
+input::placeholder{
+    color: #999999;
+    text-align: center;
+}
+input[type="submit"]{
+    margin: 10px;
+    font-size: 1rem;
+    padding: 1.5rem 1.7rem;
+    width: 300px;
+    border:none;
+    border-radius: 5px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #ddd;
+}
+.container-mid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 1000px;
+    background-color: rgba(253, 66, 0, 0.59);
+    z-index: -1;
+}
+#credit-card-img{
+    width: 300px;
+    /* display: flex; */
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+    align-content: stretch;
+    top: 350px;
+    left: 400px;
+}
+
+.flash-message {
+    font-size: 14px;
+    padding: 1.5rem 1.7rem;
+    margin: 1.5rem 0;
+    list-style-type: none;
+    background-color: white;
+}
+.error {
+    padding: 1.5rem 1.7rem;
+    border-radius: 5px;
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+.success{
+    padding: 1.5rem 1.7rem;
+    border-radius: 5px;
+    color: #3A7734;
+    background-color: #DFF2BF;
+}
