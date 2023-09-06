@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from luhn_validate import validador
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__, template_folder='templates')
 app.secret_key = 'eusouonumeroquatro'
 
 
